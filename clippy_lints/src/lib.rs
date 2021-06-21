@@ -276,6 +276,7 @@ mod mut_mutex_lock;
 mod mut_reference;
 mod mutable_debug_assertion;
 mod mutex_atomic;
+mod my_lint_function_name_is_feature;
 mod needless_arbitrary_self_type;
 mod needless_bitwise_bool;
 mod needless_bool;
@@ -823,6 +824,7 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
         mutable_debug_assertion::DEBUG_ASSERT_WITH_MUT_CALL,
         mutex_atomic::MUTEX_ATOMIC,
         mutex_atomic::MUTEX_INTEGER,
+        my_lint_function_name_is_feature::MY_LINT_FUNCTION_NAME_IS_FEATURE,
         needless_arbitrary_self_type::NEEDLESS_ARBITRARY_SELF_TYPE,
         needless_bitwise_bool::NEEDLESS_BITWISE_BOOL,
         needless_bool::BOOL_COMPARISON,
@@ -1347,6 +1349,7 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
         LintId::of(mut_mutex_lock::MUT_MUTEX_LOCK),
         LintId::of(mut_reference::UNNECESSARY_MUT_PASSED),
         LintId::of(mutex_atomic::MUTEX_ATOMIC),
+        LintId::of(my_lint_function_name_is_feature::MY_LINT_FUNCTION_NAME_IS_FEATURE),
         LintId::of(needless_arbitrary_self_type::NEEDLESS_ARBITRARY_SELF_TYPE),
         LintId::of(needless_bool::BOOL_COMPARISON),
         LintId::of(needless_bool::NEEDLESS_BOOL),
@@ -1706,6 +1709,7 @@ pub fn register_plugins(store: &mut rustc_lint::LintStore, sess: &Session, conf:
         LintId::of(misc::FLOAT_CMP),
         LintId::of(misc::MODULO_ONE),
         LintId::of(mut_key::MUTABLE_KEY_TYPE),
+        LintId::of(my_lint_function_name_is_feature::MY_LINT_FUNCTION_NAME_IS_FEATURE),
         LintId::of(non_octal_unix_permissions::NON_OCTAL_UNIX_PERMISSIONS),
         LintId::of(open_options::NONSENSICAL_OPEN_OPTIONS),
         LintId::of(option_env_unwrap::OPTION_ENV_UNWRAP),
